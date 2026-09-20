@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #20252b;
+    background: #faf9f6;
+}
+
+/* Grid Background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: .55;
+
+    background-image:
+        linear-gradient(#ddd 1px, transparent 1px),
+        linear-gradient(90deg, #ddd 1px, transparent 1px);
+
+    background-size: 30px 30px;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 0 8%;
+}
+
+.hero {
+    max-width: 1050px;
+    min-height: 100vh;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* LEFT SIDE */
+
+.eyebrow {
+    color: #c6530a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 14px 0 24px;
+
+    color: #10151a;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+p {
+    margin-bottom: 18px;
+
+    color: #45515b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    margin: 25px 0;
+
+    color: #68727b;
+    font-size: 12px;
+}
+
+.meta strong {
+    color: #222;
+}
+
+
+/* BUTTON */
+
+button {
+    border: none;
+    border-radius: 14px;
+
+    padding: 14px 23px;
+
+    color: white;
+    background: #c95808;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 18px #c9580830;
+
+    transition: .2s;
+}
+
+button:hover {
+    background: #b84e05;
+    transform: translateY(-2px);
+}
+
+button span {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+
+/* RIGHT DEMO */
+
+.demo {
+    padding: 16px;
+
+    background: white;
+    border-radius: 19px;
+
+    box-shadow: 0 12px 30px #00000018;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.shot {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+
+    background: #31271f;
+}
+
+
+/* Fake Store Image */
+
+.store {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+ 
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            #e5b96b 0 2%,
+            transparent 3%
+        ),
+        linear-gradient(
+            90deg,
+            #1e211f 0 8%, 
+            transparent 8% 88%,
+            #6a4125 88%
+        ),
+        linear-gradient(
+            180deg,
+             #17191a 0 35%, 
+            #59402c 35% 100%
+        ); 
+}
+
+.store::before {
+    content: "";
+
+    position: absolute;
+    inset: 35% 12% 0;
+
+    border: 3px solid #8e806b;
+
+    opacity: .5;
+}
+
+.store span {
+    position: relative;
+    z-index: 2;
+
+    color: #ddd;
+
+    font-size: 31px;
+    line-height: 1.12;
+    font-weight: bold;
+
+    text-shadow: 2px 2px 4px #222;
+
+    transform: rotate(-2deg);
+}
+
+
+/* BEFORE / AFTER */
+
+.tag {
+    position: absolute;
+    z-index: 3;
+
+    top: 10px;
+    left: 10px;
+
+    padding: 5px 9px;
+
+    background: white;
+    border-radius: 6px;
+
+    font-size: 9px;
+    font-weight: bold;
+}
+
+
+/* LABELS */
+
+.labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    margin-top: 13px;
+}
+
+.label {
+    padding: 10px 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 14px;
+
+    box-shadow: 0 2px 5px #0000000b;
+}
+
+.replacement {
+    border-color: #f1c86b;
+    background: #fffdf5;
+}
+
+small {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #777;
+    font-size: 10px;
+}
+
+.label strong {
+    display: block;
+
+    font-size: 12px;
+    letter-spacing: .4px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        padding: 55px 0;
+    }
+
+    .demo {
+        max-width: 650px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+
+    .page {
+        padding: 0 20px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 45px 0;
+    }
+
+    .shot {
+        height: 190px;
+    }
+
+    .store span {
+        font-size: 24px;
+    }
+
+    .labels {
+        grid-template-columns: 1fr;
+    }
+}
