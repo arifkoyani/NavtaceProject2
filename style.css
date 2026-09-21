@@ -1,30 +1,204 @@
+
+ /* This is HABIBA CSS style on task given by SIR ARIF */
+
+
+
+
+
+
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-nav{
+body{
     width: 100%;
-    height: auto;
-    background-color: black;
-    color: white;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family:  Arial, sans-serif;
+    color: #111;
+}
+ 
+    /* main section */   
+
+    .use-case{
+        min-height: 100vh;
+        padding: 70px 20px;
+        text-align: center;
+        background-color: #f8f6f1;
+    }
+
+    /* USE-CASE */
+    .small-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #b85c00;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 18px;
+    }
+    .description{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        line-height: 1.6;
+        margin-bottom: 42px;
+    }
+        /* cards */
+     .cards{
+         width: 100%;
+
+    max-width: 1088px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    text-align: left;
+     }  
+     .card{
+             background: #ffffff;
+
+    border: 1px solid #dfddd8;
+
+    border-radius: 16px;
+
+    min-height: 205px;
+
+    padding: 24px;
+
+    transition: all 0.3s ease;
+
+     }
+     .icon{
+        width: 40px;
+
+    height: 40px;
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
-    padding: 10px;
+
+    justify-content: center;
+
+    border: 1px solid #dfddd8;
+
+    border-radius: 10px;
+
+    background: #faf7f4;
+
+    color: #b85c00;
+
+    font-size: 20px;
+
+    margin-bottom: 18px;
+     }
+
+
+     /* card heading */
+     
+.card h2 {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
 }
-nav div{
-    display: flex;
-    gap: 10px;
-    font-size: 10px;
+  /* card p */
+
+.card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
 }
-nav div li {
-    list-style-type:none;
+/* Hover */
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgb(187, 77, 0);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+.card:hover .icon{
+    background-color:rgb(255, 251, 235);
+     border-color:rgb(187, 77, 0) ;
+}
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }
 
-nav div button{
-    font-size: 10px;
-    padding: 0px 10px;
-    cursor: pointer;
 
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .use-cases {
+        padding: 50px 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .description br {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .card {
+        min-height: auto;
+
+        padding: 22px;
+    }
 }
+
+
+
+
+
+
+       /* habiba css style is end here */
