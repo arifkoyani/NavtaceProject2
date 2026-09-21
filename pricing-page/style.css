@@ -1,0 +1,418 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f6f2;
+    color: #171717;
+}
+
+.container {
+    width: 94%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 35px 0;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header > p {
+    color: #777;
+    font-size: 13px;
+    margin: 8px 0 24px;
+}
+
+
+/* ================= SWITCHER ================= */
+
+.switcher {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    background: #ebe8e3;
+    border-radius: 25px;
+}
+
+.tab {
+    border: 0;
+    background: transparent;
+    color: #666;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+/* Only Annual and Monthly can become active */
+
+.tab.active {
+    background: #191817;
+    color: white;
+}
+
+
+/*
+Credit Packs NEVER receives .active.
+Its background therefore stays exactly
+like the normal switcher background.
+*/
+
+.credit-link {
+    background: transparent;
+}
+
+
+/* ================= SECTIONS ================= */
+
+#subscriptionSection {
+    margin-top: 35px;
+}
+
+#creditPacksSection {
+    margin-top: 110px;
+    padding-top: 50px;
+    border-top: 1px solid #ddd9d2;
+}
+
+#subscriptionSection h2,
+#creditPacksSection h2 {
+    text-align: center;
+    font-size: 21px;
+    margin: 0 0 7px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+    margin: 0 auto 25px;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd9d2;
+    border-radius: 10px;
+    padding: 20px 18px;
+    min-height: 500px;
+}
+
+.card h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.description {
+    color: #777;
+    font-size: 11px;
+    min-height: 30px;
+    line-height: 1.4;
+}
+
+
+/* ================= POPULAR CARD ================= */
+
+.popular {
+    border: 2px solid #ef7900;
+}
+
+.badge {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ef7900;
+    color: white;
+    padding: 4px 11px;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* ================= SALE ================= */
+
+.sale {
+    color: #ef7900;
+    font-size: 9px;
+    font-weight: bold;
+    margin: 10px 0 7px;
+}
+
+
+/* ================= PRICE ================= */
+
+.price-box {
+    background: #fffdf9;
+    border: 1px solid #e9e5de;
+    border-radius: 9px;
+    padding: 12px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.price span {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+.price small {
+    font-size: 10px;
+    color: #777;
+    font-weight: normal;
+}
+
+.price-box p {
+    color: #777;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.price-box strong {
+    font-size: 9px;
+    color: #777;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.plan-button,
+.buy-button {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0 12px;
+    background: #191817;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/*
+ONLY the Most Popular card button
+gets the lighter hover effect.
+*/
+
+.popular .plan-button,
+.popular .buy-button {
+    background: #ef7900;
+}
+
+.popular .plan-button:hover,
+.popular .buy-button:hover {
+    background: #ff9b3d;
+}
+
+
+/* ================= ANNUAL / MONTHLY ================= */
+
+.monthly-content {
+    display: none;
+}
+
+
+/* ================= CREDITS ================= */
+
+.credits {
+    border: 1px solid #e9e6e0;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.credits span {
+    display: block;
+    color: #777;
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+.credits strong {
+    display: block;
+    font-size: 21px;
+    margin-top: 3px;
+}
+
+.credits small {
+    color: #777;
+    font-size: 8px;
+}
+
+
+/* ================= COST ================= */
+
+.cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 9px 10px;
+    border: 1px solid #f0ca70;
+    border-radius: 9px;
+    color: #777;
+    font-size: 9px;
+}
+
+.cost strong {
+    color: #ef7900;
+    font-size: 12px;
+}
+
+
+/* ================= FEATURES ================= */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 13px 0 0;
+}
+
+li {
+    color: #666;
+    font-size: 9px;
+    margin: 7px 0;
+    line-height: 1.4;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    border-top: 1px solid #ddd9d2;
+    margin-top: 45px;
+    padding-top: 25px;
+}
+
+footer h3 {
+    font-size: 13px;
+}
+
+footer p {
+    color: #777;
+    font-size: 10px;
+}
+
+footer a {
+    color: #222;
+    font-weight: bold;
+}
+
+
+/* ================= MOVING PAYMENT LOGOS ================= */
+
+.payment-window {
+    width: 850px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+.payment-track {
+    display: flex;
+    width: max-content;
+    animation: paymentMove 20s linear infinite;
+}
+
+.payment-set {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding-right: 35px;
+}
+
+.payment-set img {
+    width: 65px;
+    height: 30px;
+    object-fit: contain;
+}
+
+@keyframes paymentMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .switcher {
+        width: 100%;
+    }
+
+    .tab {
+        flex: 1;
+        padding: 9px 5px;
+    }
+
+    .payment-set {
+        gap: 22px;
+    }
+
+    .payment-set img {
+        width: 50px;
+    }
+
+}
