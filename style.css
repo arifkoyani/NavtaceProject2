@@ -118,13 +118,14 @@ body {
 
     border: 2px solid #af4545;
     border-radius: 50%;
-
+    cursor:default;
     display: flex;
     align-items: center;
     justify-content: center;
-
+     
     color:#af4545;
     font-size: 14px;
+    
 }
 
 
