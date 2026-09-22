@@ -1,548 +1,260 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
+
+/* /* /* =========================
+   footer
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-nav{
+
+
+/* =========================
+   BODY
+========================= */
+
+  body {
+    font-family: "Inter", sans-serif;
+    background: #f8f6f2;
+    color: #374151;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    min-height: 730px;
+
+    padding: 48px 54px;
+
+    background-color: #f8f6f2;
+
+    /*
+       Grid background
+    */
+    /* background-image:
+        linear-gradient(
+            to right,
+            rgba(120, 120, 120, 0.10) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(120, 120, 120, 0.10) 1px,
+            transparent 1px
+        ); */
+
+    background-size: 48px 48px;
+
+    border-top: 1px solid #ddd8d0;
+    border-bottom: 1px solid #ddd8d0;
+
+    border-radius: 0 0 15px 15px;
+}
+
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
     width: 100%;
-    height: auto;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-nav div{
-    display: flex;
-    gap: 10px;
-    font-size: 10px;
-}
-nav div li {
-    list-style-type:none;
-}
+    display: grid;
+    grid-template-columns:
+        1.35fr
+        1.35fr
+        1.35fr
+        1.2fr;
+    column-gap: 55px;
 
-nav div button{
-    font-size: 10px;
-    padding: 0px 10px;
-    cursor: pointer;
-
-} */
-body {
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-                 BlinkMacSystemFont, "Segoe UI", sans-serif;
+    align-items: start;
 }
 
 
-/* ---------------------------------------------------------
-   SECTION
---------------------------------------------------------- */
+/* =========================
+   BRAND
+========================= */
 
-.rw-cases-section {
-
-    width: 100%;
-
-    padding: 80px 20px 96px;
-
-    background: #fcf9f4;
-
-    border-top: 1px solid rgba(231, 229, 228, 0.8);
-}
-
-
-/* ---------------------------------------------------------
-   SECTION HEADER
---------------------------------------------------------- */
-
-.rw-cases-header {
-
-    width: 100%;
-
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-
-.rw-section-label {
-
-    margin: 0 0 12px;
-
-    color: #b45309;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.15em;
-
-    text-transform: uppercase;
-}
-
-
-.rw-cases-header h2 {
-
-    margin: 0;
-
-    color: #292524;
-
-    font-size: 38px;
-
-    line-height: 1.15;
+.footer-brand h2 {
+    font-size: 24px;
 
     font-weight: 800;
 
-    letter-spacing: -0.025em;
+    color: #111827;
+
+    margin-bottom: 28px;
+
+    letter-spacing: -1px;
 }
 
 
-.rw-section-description {
-
-    margin: 16px auto 0;
-
-    color: #78716c;
-
-    font-size: 18px;
-
-    line-height: 1.6;
-}
-
-
-/* ---------------------------------------------------------
-   CASES LIST
---------------------------------------------------------- */
-
-.rw-cases-list {
-
-    width: 100%;
-
-    max-width: 1150px;
-
-    margin: 60px auto 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 80px;
-}
-
-
-/* ---------------------------------------------------------
-   CASE
---------------------------------------------------------- */
-
-.rw-case {
-
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(300px, 0.85fr);
-
-    align-items: center;
-
-    gap: 48px;
-}
-
-
-/* ---------------------------------------------------------
-   IMAGE LEFT
---------------------------------------------------------- */
-
-.rw-case-image-left {
-
-    grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(300px, 0.85fr);
-}
-
-
-/* ---------------------------------------------------------
-   TEXT LEFT
---------------------------------------------------------- */
-
-.rw-case-text-left {
-
-    grid-template-columns:
-        minmax(300px, 0.85fr)
-        minmax(0, 1.25fr);
-}
-
-
-/* ---------------------------------------------------------
-   CASE CONTENT
---------------------------------------------------------- */
-
-.rw-case-content {
-
-    min-width: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-/* ---------------------------------------------------------
-   CATEGORY
---------------------------------------------------------- */
-
-.rw-case-category {
-
-    margin: 0;
-
-    color: #b45309;
-
-    font-size: 11px;
-
-    line-height: 1.5;
-
-    font-weight: 700;
-
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-}
-
-
-/* ---------------------------------------------------------
-   TITLE
---------------------------------------------------------- */
-
-.rw-case-content h3 {
-
-    margin: 8px 0 0;
-
-    color: #292524;
-
-    font-size: 26px;
-
-    line-height: 1.25;
-
-    font-weight: 700;
-
-    letter-spacing: -0.02em;
-}
-
-
-/* ---------------------------------------------------------
-   DESCRIPTION
---------------------------------------------------------- */
-
-.rw-case-description {
-
-    max-width: 520px;
-
-    margin: 14px 0 0;
-
-    color: #78716c;
-
-    font-size: 16px;
-
-    line-height: 1.7;
-}
-
-
-/* ---------------------------------------------------------
-   OLD → NEW TEXT
---------------------------------------------------------- */
-
-.rw-text-change {
-
-    margin-top: 20px;
-
-    display: flex;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
+.footer-brand p {
+    max-width: 360px;
 
     font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #79716b;
 }
 
 
-.rw-old-text {
+/* =========================
+   COLUMN
+========================= */
 
-    padding: 6px 10px;
-
-    border-radius: 6px;
-
-    background: #f5f5f4;
-
-    color: #78716c;
-
-    font-weight: 500;
-
-    text-decoration-line: line-through;
-
-    text-decoration-color: rgba(120, 113, 108, 0.5);
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 
-.rw-arrow {
+/* =========================
+   HEADINGS
+========================= */
 
-    color: #d6d3d1;
+.footer-column h3 {
+    color:#bb4d00;
 
-    font-size: 18px;
+    font-size: 12px;
 
-    line-height: 1;
+    /* line-height: 1rem; */
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 30px;
 }
 
 
-.rw-new-text {
-
-    padding: 6px 10px;
-
-    border: 1px solid rgba(251, 191, 36, 0.4);
-
-    border-radius: 6px;
-
-    background: #fffbeb;
-
-    color: #78350f;
-
-    font-weight: 600;
+/* =========================
+   LINKS
+========================= */
+.footer-links {
+    list-style-type: none;
 }
 
-
-/* ---------------------------------------------------------
-   IMAGE COMPARISON
---------------------------------------------------------- */
-
-.rw-image-comparison {
-
-    width: 100%;
-
-    min-width: 0;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(231, 229, 228, 0.9);
-
-    border-radius: 16px;
-
-    background: #f5f5f4;
-
-    box-shadow:
-        0 20px 50px -28px
-        rgba(28, 25, 23, 0.35);
-}
-
-
-/* ---------------------------------------------------------
-   IMAGE BOX
---------------------------------------------------------- */
-
-.rw-image-box {
-
-    position: relative;
-
-    min-width: 0;
-
-    aspect-ratio: 16 / 9;
-
-    overflow: hidden;
-
-    background: #e7e5e4;
-}
-
-
-.rw-image-box + .rw-image-box {
-
-    border-left: 1px solid rgba(231, 229, 228, 0.9);
-}
-
-
-/* ---------------------------------------------------------
-   IMAGE
---------------------------------------------------------- */
-
-.rw-image-box img {
+.footer-column a {
+   
 
     display: block;
 
-    width: 100%;
+    text-decoration: none;
 
-    height: 100%;
+    color: #374151;
 
-    object-fit: cover;
+    font-size: 12px;
+
+    /* line-height: 1.25rem; */
+
+    margin-bottom: 23px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
-/* ---------------------------------------------------------
-   BEFORE / AFTER LABEL
---------------------------------------------------------- */
+/* Hover effect */
 
-.rw-image-label {
+.footer-column a:hover {
+    color: #bb4d00;
 
-    position: absolute;
-
-    top: 12px;
-
-    left: 12px;
-
-    z-index: 2;
-
-    padding: 5px 9px;
-
-    border-radius: 6px;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    color: #44403c;
-
-    font-size: 11px;
-
-    line-height: 1.2;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.08);
+    
 }
 
 
+/* =========================
+   CONTACT
+========================= */
 
-/* =========================================================
-   TABLET
-========================================================= */
+.contact-title {
+    margin-top: 32px;
+}
 
-@media (max-width: 900px) {
 
-    .rw-cases-section {
+.footer-column .email {
+    font-size: 12px;
 
-        padding: 65px 24px 80px;
+    margin-top: 0;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .footer {
+        padding: 45px 35px;
     }
 
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
 
-    .rw-cases-header h2 {
+        row-gap: 50px;
 
-        font-size: 34px;
+        column-gap: 40px;
     }
 
-
-    .rw-case,
-    .rw-case-image-left,
-    .rw-case-text-left {
-
-        grid-template-columns: 1fr;
-
-        gap: 28px;
+    .footer-brand h2 {
+        font-size: 32px;
     }
 
-
-    .rw-case-text-left .rw-case-content {
-
-        order: 1;
-    }
-
-
-    .rw-case-text-left .rw-image-comparison {
-
-        order: 2;
-    }
-
-
-    .rw-cases-list {
-
-        gap: 65px;
+    .footer-brand p {
+        font-size: 18px;
     }
 
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* Mobile */
 
 @media (max-width: 600px) {
 
-    .rw-cases-section {
+    .footer {
+        padding: 40px 25px;
 
-        padding: 55px 16px 70px;
+        background-size: 35px 35px;
     }
 
+    .footer-container {
+        grid-template-columns: 1fr;
 
-    .rw-cases-header h2 {
+        row-gap: 45px;
+    }
 
+    .footer-brand h2 {
         font-size: 30px;
     }
 
+    .footer-brand p {
+        font-size: 17px;
 
-    .rw-section-description {
-
-        font-size: 16px;
+        max-width: 100%;
     }
 
-
-    .rw-cases-list {
-
-        margin-top: 45px;
-
-        gap: 55px;
-    }
-
-
-    .rw-case {
-
-        gap: 22px;
-    }
-
-
-    .rw-case-content h3 {
-
-        font-size: 22px;
-    }
-
-
-    .rw-case-description {
-
+    .footer-column h3 {
         font-size: 15px;
 
-        line-height: 1.65;
+        letter-spacing: 2px;
+
+        margin-bottom: 22px;
     }
 
+    .footer-column a {
+        font-size: 17px;
 
-    .rw-image-comparison {
-
-        border-radius: 12px;
+        margin-bottom: 18px;
     }
 
-
-    .rw-image-label {
-
-        top: 8px;
-
-        left: 8px;
-
-        padding: 4px 7px;
-
-        font-size: 10px;
-    }
-
-
-    .rw-text-change {
-
-        font-size: 13px;
-    }
-
-
-    .rw-cases-button {
-
-        margin-top: 50px;
-    }
-
-}
+}  

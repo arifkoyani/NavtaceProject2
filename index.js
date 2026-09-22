@@ -1,64 +1,105 @@
-/* =========================================================
-   REWORDS AI
-   REAL EXAMPLES JAVASCRIPT
-========================================================= */
+// /* =========================================================
+//    REWORDS AI
+//    REAL EXAMPLES JAVASCRIPT
+// ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-    const workspaceButton =
-        document.getElementById("rwTryWorkspace");
-
-
-    if (workspaceButton) {
-
-        workspaceButton.addEventListener(
-            "click",
-            function (event) {
-
-                const target =
-                    document.getElementById("app-section");
+//     const workspaceButton =
+//         document.getElementById("rwTryWorkspace");
 
 
-                if (target) {
+//     if (workspaceButton) {
 
-                    event.preventDefault();
+//         workspaceButton.addEventListener(
+//             "click",
+//             function (event) {
 
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-
-                }
-
-            }
-        );
-
-    }
+//                 const target =
+//                     document.getElementById("app-section");
 
 
-    /*
-       Small image loading effect
-    */
+//                 if (target) {
 
-    const caseImages =
-        document.querySelectorAll(
-            ".rw-image-box img"
-        );
+//                     event.preventDefault();
+
+//                     target.scrollIntoView({
+//                         behavior: "smooth",
+//                         block: "start"
+//                     });
+
+//                 }
+
+//             }
+//         );
+
+//     }
 
 
-    caseImages.forEach(function (image) {
+//     /*
+//        Small image loading effect
+//     */
 
-        image.addEventListener(
-            "load",
-            function () {
+//     const caseImages =
+//         document.querySelectorAll(
+//             ".rw-image-box img"
+//         );
 
-                image.classList.add(
-                    "rw-image-loaded"
-                );
 
-            }
-        );
+//     caseImages.forEach(function (image) {
+
+//         image.addEventListener(
+//             "load",
+//             function () {
+
+//                 image.classList.add(
+//                     "rw-image-loaded"
+//                 );
+
+//             }
+//         );
+
+//     });
+
+// });
+// ===============================
+// FOOTER JAVASCRIPT
+// ===============================
+
+
+// Select all footer links
+const footerLinks = document.querySelectorAll(".footer-column a");
+
+
+// Add click effect to links
+footerLinks.forEach(function(link) {
+
+    link.addEventListener("click", function(event) {
+
+        // Ignore email link
+        if (link.classList.contains("email")) {
+            return;
+        }
+
+        // Prevent page from jumping to "#"
+        event.preventDefault();
+
+        console.log("You clicked:", link.textContent);
 
     });
+    
+
+});
+
+
+// ===============================
+// EMAIL CLICK
+// ===============================
+
+const email = document.querySelector(".email");
+
+email.addEventListener("click", function() {
+
+    console.log("Opening email:", email.textContent);
 
 });
