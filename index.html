@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWords AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+        <section class="hero">
+
+            <!-- LEFT CONTENT -->
+            <div class="content">
+
+                <div class="eyebrow">WHAT</div>
+
+                <h1>What is ReWords AI?</h1>
+
+                <p>
+                    ReWords AI helps you replace existing text in finished images
+                    without rebuilding the design from scratch. Select the text area,
+                    enter the replacement, and the model tries to match the original
+                    font, color, and background. No Photoshop or source design file
+                    is required.
+                </p>
+
+                <p>
+                    Upload a PNG, JPG, or WebP image, select the text you want to
+                    change, enter the replacement, and generate a revised image.
+                    ReWords AI works on desktop and mobile, and new users can try a
+                    free image edit after signing in.
+                </p>
+
+                <div class="meta">
+                    <strong>By ReWords AI</strong>
+                    <span>·</span>
+                    <span>Updated 2026-07-26</span>
+                </div>
+
+                <button id="editBtn">
+                    Try a free edit <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- RIGHT DEMO -->
+            <div class="demo">
+
+                <div class="images">
+                
+
+                    <!-- BEFORE -->
+                    <div class="shot">
+                        <span class="tag">BEFORE</span>
+
+                        <div class="store">
+                            <span>
+                                OPENING<br>
+                                SOON
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <!-- AFTER -->
+                    <div class="shot">
+                        <span class="tag">AFTER</span>
+
+                        <div class="store">
+                            <span id="afterText">
+                                NOW<br>
+                                OPEN
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- TEXT BOXES -->
+                <div class="labels">
+
+                    <div class="label">
+                        <small>Original Text (Detected)</small>
+                        <strong>OPENING SOON</strong>
+                    </div>
+
+                    <div class="label replacement">
+                        <small>New Text (Replacement)</small>
+                        <strong id="replacement">NOW OPEN</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
