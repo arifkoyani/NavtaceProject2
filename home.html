@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How It Works</title>
+<link rel="stylesheet" href="/NavtaceProject2/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+ 
+  @media (max-width:980px){
+    .steps{grid-template-columns:repeat(2,1fr);gap:24px;}
+  }
+  @media (max-width:560px){
+    .steps{grid-template-columns:1fr;}
+    .card h3{margin-bottom:18px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;}
+    .card:hover{transform:none;}
+  }
+</style>
+</head>
+<!-- ------BODY-------- -->
+<body>
+
+<!-- -----SECTION----- -->
+<section class="section">
+  <p class="para">How it works</p>
+  <h2 class="title">How It Works</h2>
+  <p class="subtitle">Four simple steps to professional text replacement.</p>
+
+<!-- -----CARDS------- -->
+
+  <div class="steps">
+
+    <div class="card" >
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+      </div>
+      <p class="num">01</p>
+      <h3>Upload</h3>
+      <p>Drop a PNG, JPG, or WebP image into the workspace.</p>
+    </div>
+
+    <div class="card" >
+      <div class="icon">
+        <svg viewBox="0 0 24 24" class="filled"><path d="M5 3l14 8.5-6.2 1.3L9.8 19 5 3z"/></svg>
+      </div>
+      <p class="num">02</p>
+      <h3>Select</h3>
+      <p>Click detected text or draw a box around missed words.</p>
+    </div>
+
+    <div class="card" >
+      <div class="icon">
+        <svg viewBox="0 0 24 24" class="filled"><path d="M12 2l1.9 5.6L19.5 9.5 13.9 11.4 12 17l-1.9-5.6L4.5 9.5l5.6-1.9L12 2z"/><path d="M18.5 14l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z"/></svg>
+      </div>
+      <p class="num">03</p>
+      <h3>Replace All Text</h3>
+      <p>Enter replacements and generate — 10 credits per standard 1K image.</p>
+    </div>
+
+    <div class="card" >
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M12 4v12"/><path d="m7 11 5 5 5-5"/><path d="M4 18v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1"/></svg>
+      </div>
+      <p class="num">04</p>
+      <h3>Download</h3>
+      <p>Save the result and use it in your campaign or product.</p>
+    </div>
+
+  </div>
+<!-- -----BUTTON------ -->
+  <a class="cta" href="#workspace">Try it in the workspace</a>
+</section>
+
+<script  src="/NavtaceProject2/index.js"></script>
+  
+</script>
+
+</body>

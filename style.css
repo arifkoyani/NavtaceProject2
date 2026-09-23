@@ -1,173 +1,165 @@
-* {
+/* *{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #faf9f7;
-    color: #1c1917;
-
-    /* background */
-    background-image:
-        linear-gradient(#e7e5e4 1px, transparent 1px),
-        linear-gradient(90deg, #e7e5e4 1px, transparent 1px);
-    background-size: 38px 38px;
-}
-
-
-/* FAQ  */
-
-.faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.title {
-    text-align: center;
-    color: #e87500;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-top: 80px;
-}
-
-.faq-section h2 {
-    text-align: center;
-    font-size: 35px;
-    margin: 20px 0 50px;
-    font-weight: 900;
-}
-
-
-/* FAQ Box */
-
-.faq-list details {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-
-
-.faq-list summary {
-    height: 100px;
-    padding: 20px 50px;
-    height: 70px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+nav{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    list-style: none;
+    align-items: center;
+    padding: 10px;
+}
+nav div{
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+}
+nav div li {
+    list-style-type:none;
 }
 
+nav div button{
+    font-size: 10px;
+    padding: 0px 10px;
+    cursor: pointer;
 
+} */
+/* Alvina's CSS */
+   :root{
+    --bg:#faf6f0;
+    --grid:rgba(180,160,140,.18);
+    --card:#ffffff;
+    --accent:#bb4d00;
+    --accent-soft:#fdf0e6;
+    --ink:#111111;
+    --muted:#6b7280;
+    --fix:#974500;
+    --radius:14px;
+    --view:#fe9a00
+    
+  }
+/* --------BODY-------- */
+  body{
+    margin:0;
+    background:var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:56px 56px;
+    font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    color:var(--ink);
+  }
+/* -------SECTION-------- */
+  .section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:64px 20px 72px;
+    text-align:center;
+  }
+/* -------PARAGRAPH */
+  .para{
+    margin:0 0 14px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
 
+  .title{
+    margin:0 0 14px;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:800;
+    letter-spacing:-.02em;
+  }
 
+  .subtitle{
+    margin:0 auto 48px;
+    max-width:52ch;
+    font-size:17px;
+    color:var(--muted);
+  }
 
-/* Right side arrow */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:32px;
+    margin-bottom:48px;
+  }
+/* ------CARDS------- */
+  .card{
+    background:var(--card);
+    border: 0.1px solid transparent;     
+    border-radius:var(--radius);
+    padding:34px 26px 40px;
+    box-shadow:0 1px 3px rgba(17,17,17,.06);
+    transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
 
-.faq-list summary::after {
-    content: "▾";
-    font-size: 14px;
-    color: #aaa;
-}
+  /* orange border on the card */
+  .card:hover,
+  .card:focus-within{
+    border-color:var(--view);
+    box-shadow:0 10px 24px rgba(194,65,12,.12);
+  }
+/* -------ICONS-------- */
+  .icon{
+    width: 60px;
+    height:70px;
+    margin:0 auto 22px;
+    display:grid;
+    place-items:center;
+    border-radius:60%;
+    background:var(--accent-soft);
+    border:2px solid transparent;      /* same trick for the circle */
+    color:var(--accent);
+    transition:border-color .25s ease, background-color .25s ease;
+  }
 
+  /* border appears around the icon too */
+  .card:hover .icon,
+  .card:focus-within .icon{
+    border-color:var(--view);
+    background:#fbe4d3;
+  }
 
-/* Open arrow */
+  .icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;color:var(--transparent);transition:stroke .25s ease,fill .25s ease;}
+  .icon svg.filled{fill:var(--accent);stroke:none;}
 
-.faq-list details[open] summary::after {
-    content: "▴";
-}
+  .num{
+    margin:0 0 10px;
+    font-size:15px;
+    font-weight:700;
+    color:var(--accent);
+  }
 
+  .card h3{
+    margin:0 0 30px;
+    font-size:18px;
+    font-weight:600;
+  }
 
-/* Answer */
+  .card p{
+    margin:0;
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--muted);
+  }
 
-.faq-list p {
-    margin: 0;
-    padding: 0 35px 30px;
-
-    color: #78716c;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-
-/* Open FAQ border */
-
-.faq-list details[open] {
-    border-color: #fbbf24;
-}
-
-@media (max-width: 768px) {
-
-    .faq-section {
-        padding: 20px;
-    }
-
-    .title {
-        margin-top: 50px;
-    }
-
-    .faq-section h2 {
-        font-size: 30px;
-        margin-bottom: 35px;
-    }
-
-    .faq-list summary {
-        height: 65px;
-        padding: 15px 30px;
-        font-size: 17px;
-    }
-
-    .faq-list p {
-        padding: 0 30px 25px;
-        font-size: 16px;
-    }
-}
-
-
-/* Responcive*/
-
-@media (max-width: 480px) {
-
-    .faq-section {
-        padding: 15px;
-    }
-
-    .title {
-        margin-top: 35px;
-        font-size: 11px;
-    }
-
-    .faq-section h2 {
-        font-size: 25px;
-        margin: 15px 0 30px;
-    }
-
-    .faq-list details {
-        border-radius: 15px;
-        margin-bottom: 12px;
-    }
-
-    .faq-list summary {
-        height: 60px;
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-
-    .faq-list summary::after {
-        font-size: 12px;
-    }
-
-    .faq-list p {
-        padding: 0 20px 20px;
-        font-size: 14px;
-        line-height: 1.6;
-    }
-}
+  .cta{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:10px;
+    background:var(--accent);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none;
+    border:2px solid var(--accent);
+    transition:background-color .2s ease, transform .2s ease;
+  }
+  
