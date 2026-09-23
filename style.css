@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -27,4 +27,139 @@ nav div button{
     padding: 0px 10px;
     cursor: pointer;
 
-}
+} */
+/* Alvina's CSS */
+   :root{
+    --bg:#faf6f0;
+    --grid:rgba(180,160,140,.18);
+    --card:#ffffff;
+    --accent:#bb4d00;
+    --accent-soft:#fdf0e6;
+    --ink:#111111;
+    --muted:#6b7280;
+    --fix:#974500;
+    --radius:14px;
+    --view:#fe9a00
+    
+  }
+/* --------BODY-------- */
+  body{
+    margin:0;
+    background:var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:56px 56px;
+    font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    color:var(--ink);
+  }
+/* -------SECTION-------- */
+  .section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:64px 20px 72px;
+    text-align:center;
+  }
+/* -------PARAGRAPH */
+  .para{
+    margin:0 0 14px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  .title{
+    margin:0 0 14px;
+    font-size:clamp(32px,5vw,46px);
+    font-weight:800;
+    letter-spacing:-.02em;
+  }
+
+  .subtitle{
+    margin:0 auto 48px;
+    max-width:52ch;
+    font-size:17px;
+    color:var(--muted);
+  }
+
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:32px;
+    margin-bottom:48px;
+  }
+/* ------CARDS------- */
+  .card{
+    background:var(--card);
+    border: 0.1px solid transparent;     
+    border-radius:var(--radius);
+    padding:34px 26px 40px;
+    box-shadow:0 1px 3px rgba(17,17,17,.06);
+    transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+
+  /* orange border on the card */
+  .card:hover,
+  .card:focus-within{
+    border-color:var(--view);
+    box-shadow:0 10px 24px rgba(194,65,12,.12);
+  }
+/* -------ICONS-------- */
+  .icon{
+    width: 60px;
+    height:70px;
+    margin:0 auto 22px;
+    display:grid;
+    place-items:center;
+    border-radius:60%;
+    background:var(--accent-soft);
+    border:2px solid transparent;      /* same trick for the circle */
+    color:var(--accent);
+    transition:border-color .25s ease, background-color .25s ease;
+  }
+
+  /* border appears around the icon too */
+  .card:hover .icon,
+  .card:focus-within .icon{
+    border-color:var(--view);
+    background:#fbe4d3;
+  }
+
+  .icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;color:var(--transparent);transition:stroke .25s ease,fill .25s ease;}
+  .icon svg.filled{fill:var(--accent);stroke:none;}
+
+  .num{
+    margin:0 0 10px;
+    font-size:15px;
+    font-weight:700;
+    color:var(--accent);
+  }
+
+  .card h3{
+    margin:0 0 30px;
+    font-size:18px;
+    font-weight:600;
+  }
+
+  .card p{
+    margin:0;
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--muted);
+  }
+
+  .cta{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:10px;
+    background:var(--accent);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none;
+    border:2px solid var(--accent);
+    transition:background-color .2s ease, transform .2s ease;
+  }
+  
